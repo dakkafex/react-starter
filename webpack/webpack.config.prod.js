@@ -8,6 +8,10 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = merge(common, {
   mode: 'production',
+  devServer: {
+    contentBase: Path.resolve(__dirname, 'build'),
+    port: 80
+  },
   devtool: 'source-map',
   stats: 'errors-only',
   optimization: {
